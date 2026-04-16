@@ -68,3 +68,59 @@ print("Student list:", student)
 print("Name:", student[0])
 print("Age:", student[1])
 print("Passed:", student[2])
+
+
+my_list = [80,90,20,1,50]
+print("My list:", my_list)
+
+
+people_list = ["Alice", "Bob", "Charlie", "David"]
+print("People list:", people_list)
+
+# slicing
+print("First two people:", people_list[0:2])
+print("Last two people:", people_list[-2:])
+print("All people except first:", people_list[1:])
+print("All people except last:", people_list[:-1])
+
+
+# appending
+people_list.append("Eve")
+print("After appending Eve:", people_list)
+
+# inserting
+people_list.insert(2, "Frank")
+print("After inserting Frank at index 2:", people_list)
+
+# removing
+people_list.remove("Charlie")
+print("After removing Charlie:", people_list)
+
+# popping
+popped_person = people_list.pop(2)
+print("Popped person:", popped_person)
+
+# length
+print("Number of people:", len(people_list))
+
+# looping
+print("Looping through people:")
+for person in people_list:
+    print(person)
+
+# checking existence
+if "Alice" in people_list:
+    print("Alice is in the list.")
+else:    print("Alice is not in the list.")
+
+
+# sorting
+my_list.sort()
+print("Sorted my list:", my_list)
+
+people_list.sort()
+print("Sorted people list:", people_list)
+
+people_list.append("Alby")
+people_list.sort()
+print("After appending Alby and sorting:", people_list)
