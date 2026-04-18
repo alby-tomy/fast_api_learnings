@@ -15,3 +15,10 @@ while count_num <= 3:
 print("For loop example:")
 for number in range(1, 4):
     print("Number:", number)
+
+
+my_list = [1,2,3,4,5,6]
+ttl = 0
+for n in my_list:
+    ttl += n
+print("Total of my_list:", ttl)
