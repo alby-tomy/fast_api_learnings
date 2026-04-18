@@ -29,7 +29,7 @@ Bundling data and methods together while hiding internal implementation details.
 
 
 #### Polymorphism
-Objects can take multiple forms; same method name behaves differently for different classes.
+Objects can take multiple forms; same method name behaves differently for different classes. Inshort changing the object at specific runtime
 
 #### Abstraction
 Hiding complex implementation and showing only essential features to the user.
@@ -87,3 +87,6 @@ Enemy Object
 - Health points
 - Attack damage
 
+## Parent Class and Child Class
+- Parent Class : Enemy
+- Child Class : Zombiee - spred_disease
