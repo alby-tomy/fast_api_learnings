@@ -92,11 +92,11 @@ print("After appending Eve:", people_list)
 people_list.insert(2, "Frank")
 print("After inserting Frank at index 2:", people_list)
 
-# removing
+# removing [removing by value]
 people_list.remove("Charlie")
 print("After removing Charlie:", people_list)
 
-# popping
+# popping [removing by index]
 popped_person = people_list.pop(2)
 print("Popped person:", popped_person)
 
