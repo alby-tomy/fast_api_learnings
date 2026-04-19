@@ -90,3 +90,11 @@ Enemy Object
 ## Parent Class and Child Class
 - Parent Class : Enemy
 - Child Class : Zombiee - spred_disease
+- Hero Class : health_points, attack_damage, is_weapon_equipped, weapon : Weapon [will HAS_A(composition) relationship with our weapon class]
+- Weapon Class : weapon_type, attack_increase
+
+# Composition
+- A way to create objects made up of other objects
+- In composition, a class contains one or more onjects of another class as instance variables.
+- Provide layered functionality to the object
+- Known as a HAS-A relationship

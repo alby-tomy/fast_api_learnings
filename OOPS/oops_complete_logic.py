@@ -680,3 +680,44 @@ print(f"Total balance: {bank.get_total_balance()}")
 
 
 print("\n✅ OOP Complete Guide Executed Successfully!")
+
+# ============================================================================
+# BONUS: COMPOSITION vs INHERITANCE - Detailed Comparison
+# ============================================================================
+
+# Example: What if we used inheritance instead?
+class Vehicle:
+    def __init__(self, fuel_type):
+        self.fuel_type = fuel_type
+
+class Engine:
+    def __init__(self, horsepower):
+        self.horsepower = horsepower
+
+# ❌ WRONG - Inheritance (tight coupling)
+class CarWithInheritance(Vehicle):
+    pass
+
+# ✅ RIGHT - Composition (loose coupling, flexible)
+class CarWithComposition:
+    def __init__(self, model, engine: Engine, fuel_type):
+        self.model = model
+        self.engine = engine
+        self.fuel_type = fuel_type
+    
+    def display_specs(self):
+        return f"{self.model}: {self.engine.horsepower}HP, Fuel: {self.fuel_type}"
+
+# Composition allows reuse of Engine in other classes
+class Motorcycle:
+    def __init__(self, model, engine: Engine):
+        self.model = model
+        self.engine = engine
+
+# Create shared engine
+engine = Engine(150)
+car = CarWithComposition("BMW", engine, "Petrol")
+bike = Motorcycle("Harley", engine)
+
+print(car.display_specs())
+print(f"Motorcycle: {bike.model} with {bike.engine.horsepower}HP engine")
