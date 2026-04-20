@@ -1,4 +1,4 @@
-# FastAPI is now compatible with both Pydantic v1 and Pydantic v2.
+# FastAPI is now compatible with both Pydantic v1 and Pydantic v2
 
 Based on how new the version of FastAPI you are using, there could be small method name changes.
 
