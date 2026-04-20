@@ -2,9 +2,7 @@
 
 Based on how new the version of FastAPI you are using, there could be small method name changes.
 
-
-
-## The three biggest are:
+## The three biggest are
 
 - ```.dict()``` function is now renamed to ```.model_dump()```
 - ```schema_extra``` function within a Config class is now renamed to ```json_schema_extra```
