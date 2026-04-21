@@ -24,3 +24,9 @@
   - Read
   - Update
   - Delete
+
+# Foreign Key
+- A forign key is a column within a relational database table that provides a link between two seperate tables
+- A foreign key references a primary key of another table
+- Most relational databases need foreign keys to be able to link tables tohether to present data
+- 
