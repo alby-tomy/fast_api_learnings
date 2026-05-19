@@ -12,6 +12,7 @@ class Users(Base):
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
     role = Column(String)
+    # phone_number =Column(String, unique=True) # to test alembic migration
 
 class Todos(Base):
     __tablename__ = 'todos' #table name
