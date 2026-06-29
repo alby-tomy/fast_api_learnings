@@ -1,6 +1,5 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base, sessionmaker
 
 """
 SQLite database configuration module for SQLAlchemy ORM.
@@ -19,8 +18,11 @@ Note:
     when different threads try to access the database through pooled connections.
 """
 
-SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:root123@localhost/ToDoApplicationDB'
+SQLALCHEMY_DATABASE_URL = "sqlite:///./todos.db"
 
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL,
+    connect_args={"check_same_thread": False},
+)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
